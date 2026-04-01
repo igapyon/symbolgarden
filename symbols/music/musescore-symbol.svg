@@ -1,0 +1,65 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">MuseScore symbol</title>
+  <desc id="desc">A MuseScore inspired symbol with a score page and notation editor accents.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A84252"/>
+      <stop offset="1" stop-color="#6F2634"/>
+    </linearGradient>
+    <linearGradient id="sheet" x1="324" y1="322" x2="864" y2="894" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF9FB"/>
+      <stop offset="1" stop-color="#F1DDE3"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="446" y1="530" x2="786" y2="786" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E38A9A"/>
+      <stop offset="1" stop-color="#C95E73"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.435294 0 0 0 0 0.14902 0 0 0 0 0.203922 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="314" y="296" width="572" height="612" rx="72" fill="url(#sheet)"/>
+
+    <rect x="314" y="296" width="572" height="136" rx="72" fill="#822D3E"/>
+    <rect x="382" y="348" width="212" height="30" rx="15" fill="#FFF1F4" fill-opacity="0.96"/>
+    <circle cx="794" cy="364" r="20" fill="#FFF1F4"/>
+    <circle cx="730" cy="364" r="20" fill="#EABCCA"/>
+
+    <g stroke="#C67688" stroke-width="8" stroke-linecap="round" opacity="0.8">
+      <path d="M404 548H812"/>
+      <path d="M404 584H812"/>
+      <path d="M404 620H812"/>
+      <path d="M404 656H812"/>
+      <path d="M404 692H812"/>
+    </g>
+
+    <g fill="url(#accent)">
+      <rect x="456" y="734" width="300" height="40" rx="20"/>
+      <ellipse cx="494" cy="644" rx="34" ry="26"/>
+      <ellipse cx="640" cy="608" rx="34" ry="26"/>
+    </g>
+
+    <g stroke="#8A3346" stroke-width="16" stroke-linecap="round">
+      <path d="M520 632V504"/>
+      <path d="M666 596V486"/>
+      <path d="M756 744L820 744"/>
+    </g>
+
+    <rect x="404" y="790" width="408" height="52" rx="26" fill="#E7B1BE"/>
+    <g fill="#FFF3F6">
+      <rect x="434" y="806" width="82" height="20" rx="10"/>
+      <rect x="534" y="806" width="120" height="20" rx="10"/>
+      <rect x="672" y="806" width="110" height="20" rx="10"/>
+    </g>
+  </g>
+</svg>

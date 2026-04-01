@@ -1,0 +1,55 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Diary symbol</title>
+  <desc id="desc">A diary symbol with a notebook cover and journal lines.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#B56A8A"/>
+      <stop offset="1" stop-color="#7B3F5A"/>
+    </linearGradient>
+    <linearGradient id="cover" x1="332" y1="334" x2="842" y2="872" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF9FC"/>
+      <stop offset="1" stop-color="#F3E1E8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="430" y1="518" x2="790" y2="796" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E7A7C0"/>
+      <stop offset="1" stop-color="#C96C94"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.482353 0 0 0 0 0.247059 0 0 0 0 0.352941 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="332" y="284" width="536" height="640" rx="54" fill="url(#cover)"/>
+    <rect x="332" y="284" width="92" height="640" rx="54" fill="#8D4B68"/>
+
+    <g fill="#F8EEF2">
+      <circle cx="378" cy="390" r="18"/>
+      <circle cx="378" cy="470" r="18"/>
+      <circle cx="378" cy="550" r="18"/>
+      <circle cx="378" cy="630" r="18"/>
+      <circle cx="378" cy="710" r="18"/>
+    </g>
+
+    <rect x="464" y="392" width="250" height="34" rx="17" fill="#B25D84"/>
+    <g fill="#E2A7C0">
+      <rect x="464" y="488" width="264" height="24" rx="12"/>
+      <rect x="464" y="536" width="222" height="24" rx="12"/>
+      <rect x="464" y="624" width="280" height="24" rx="12"/>
+      <rect x="464" y="672" width="206" height="24" rx="12"/>
+    </g>
+
+    <g fill="url(#accent)">
+      <rect x="464" y="760" width="304" height="26" rx="13"/>
+      <rect x="464" y="806" width="196" height="20" rx="10"/>
+    </g>
+  </g>
+</svg>

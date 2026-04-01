@@ -1,0 +1,48 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Java symbol</title>
+  <desc id="desc">A Java symbol with a coffee cup and steam.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D97E53"/>
+      <stop offset="1" stop-color="#9A4E2B"/>
+    </linearGradient>
+    <linearGradient id="card" x1="324" y1="322" x2="864" y2="894" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFCFB"/>
+      <stop offset="1" stop-color="#F3E1D9"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="430" y1="560" x2="790" y2="806" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F5C0A3"/>
+      <stop offset="1" stop-color="#DF8A5E"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.603922 0 0 0 0 0.305882 0 0 0 0 0.168627 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="314" y="296" width="572" height="612" rx="72" fill="url(#card)"/>
+
+    <rect x="314" y="296" width="572" height="136" rx="72" fill="#B55E36"/>
+    <rect x="382" y="348" width="156" height="30" rx="15" fill="#FFF2EB" fill-opacity="0.96"/>
+    <circle cx="794" cy="364" r="20" fill="#FFF2EB"/>
+    <circle cx="730" cy="364" r="20" fill="#F0D1C1"/>
+
+    <g stroke="#BA673E" stroke-width="12" stroke-linecap="round" opacity="0.9">
+      <path d="M540 430C520 462 552 476 540 506C528 534 494 548 512 582"/>
+      <path d="M602 414C582 446 618 464 608 494C598 524 564 540 578 570"/>
+      <path d="M668 430C650 460 684 476 674 506C664 536 632 550 646 580"/>
+    </g>
+
+    <path d="M414 628C414 594.863 440.863 568 474 568H698C731.137 568 758 594.863 758 628V678C758 735.438 711.438 782 654 782H518C460.562 782 414 735.438 414 678V628Z" fill="url(#cup)"/>
+    <path d="M758 618H786C822.451 618 852 647.549 852 684C852 720.451 822.451 750 786 750H758" stroke="#B55E36" stroke-width="18"/>
+    <rect x="462" y="806" width="296" height="28" rx="14" fill="#D98A61"/>
+  </g>
+</svg>

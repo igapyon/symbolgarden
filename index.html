@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>symbolgarden catalog</title>
+  <style>
+    :root {
+      --bg: #f5f2ea;
+      --bg-accent: #efe7d7;
+      --panel: rgba(255, 252, 246, 0.9);
+      --ink: #1d1f1a;
+      --muted: #5f6358;
+      --line: rgba(29, 31, 26, 0.12);
+      --brand: #b24c2f;
+      --brand-soft: rgba(178, 76, 47, 0.12);
+      --shadow: 0 20px 60px rgba(54, 45, 29, 0.12);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --sans: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+      --mono: "SFMono-Regular", "Menlo", "Consolas", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(178, 76, 47, 0.14), transparent 28%),
+        radial-gradient(circle at right 20%, rgba(137, 159, 92, 0.16), transparent 24%),
+        linear-gradient(180deg, var(--bg-accent) 0%, var(--bg) 52%, #fbfaf6 100%);
+      min-height: 100vh;
+    }
+
+    .page {
+      width: min(1200px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 40px 0 56px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 20px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 8px);
+      background: linear-gradient(135deg, rgba(255, 251, 243, 0.92), rgba(247, 241, 229, 0.82));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(178, 76, 47, 0.18), transparent 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--brand);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 6vw, 4.6rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .summary {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .toolbar {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr;
+      margin-top: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .search {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 14px 18px;
+      font: inherit;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.82);
+      outline: none;
+    }
+
+    .search:focus {
+      border-color: rgba(178, 76, 47, 0.5);
+      box-shadow: 0 0 0 4px rgba(178, 76, 47, 0.08);
+    }
+
+    .filters,
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 14px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .chip.active {
+      border-color: rgba(178, 76, 47, 0.38);
+      background: var(--brand-soft);
+      color: var(--brand);
+    }
+
+    .stat {
+      font-size: 0.92rem;
+      color: var(--muted);
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(29, 31, 26, 0.08);
+    }
+
+    .catalog {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: grid;
+      gap: 14px;
+      padding: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 40px rgba(45, 35, 24, 0.08);
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 44px rgba(45, 35, 24, 0.12);
+      border-color: rgba(178, 76, 47, 0.18);
+    }
+
+    .preview {
+      display: grid;
+      place-items: center;
+      min-height: 180px;
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      border: 1px dashed rgba(29, 31, 26, 0.12);
+      background:
+        linear-gradient(45deg, rgba(29, 31, 26, 0.03) 25%, transparent 25%, transparent 75%, rgba(29, 31, 26, 0.03) 75%),
+        linear-gradient(45deg, rgba(29, 31, 26, 0.03) 25%, transparent 25%, transparent 75%, rgba(29, 31, 26, 0.03) 75%);
+      background-position: 0 0, 12px 12px;
+      background-size: 24px 24px;
+    }
+
+    .preview img {
+      max-width: 100%;
+      max-height: 148px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 18px rgba(20, 20, 20, 0.08));
+    }
+
+    .preview.file-only {
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+      line-height: 1.6;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .meta {
+      display: grid;
+      gap: 8px;
+    }
+
+    .title {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+
+    .path {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+      font-family: var(--mono);
+      word-break: break-all;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(29, 31, 26, 0.06);
+      color: var(--muted);
+      font-size: 0.76rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .links a {
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .empty {
+      margin-top: 28px;
+      padding: 28px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--muted);
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100vw - 20px, 1200px);
+        padding-top: 18px;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+
+      .catalog {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Asset Catalog</p>
+      <h1>symbolgarden</h1>
+      <p class="summary">
+        SVG シンボル、ワードマーク、OGP 素材を一覧できるローカルカタログです。
+        検索欄またはカテゴリフィルタで絞り込めます。
+      </p>
+      <div class="toolbar">
+        <input id="search" class="search" type="search" placeholder="ファイル名、カテゴリ、拡張子で検索">
+        <div id="filters" class="filters"></div>
+        <div id="stats" class="stats"></div>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog"></section>
+    <section id="empty" class="empty">条件に一致するファイルはありません。</section>
+  </main>
+
+  <script>
+    const assets = [
+      { path: "symbols/business/clock-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/close-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/common-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/csv-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/diary-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/firewall-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/format-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/group-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/json-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/map-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/mermaid-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/monthly-calendar-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/network-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/open-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/pull-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/push-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/remind-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/schedule-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/server-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/share-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/standalone-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/virus-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/business/xlsx-symbol.svg", kind: "symbol", group: "business", ext: "svg", preview: true },
+      { path: "symbols/generic/agent-symbol.svg", kind: "symbol", group: "generic", ext: "svg", preview: true },
+      { path: "symbols/generic/download-symbol.svg", kind: "symbol", group: "generic", ext: "svg", preview: true },
+      { path: "symbols/generic/markdown-symbol.svg", kind: "symbol", group: "generic", ext: "svg", preview: true },
+      { path: "symbols/generic/svg-symbol.svg", kind: "symbol", group: "generic", ext: "svg", preview: true },
+      { path: "symbols/music/abc-symbol.svg", kind: "symbol", group: "music", ext: "svg", preview: true },
+      { path: "symbols/music/klondike-symbol.svg", kind: "symbol", group: "music", ext: "svg", preview: true },
+      { path: "symbols/music/lilypond-symbol.svg", kind: "symbol", group: "music", ext: "svg", preview: true },
+      { path: "symbols/music/mei-symbol.svg", kind: "symbol", group: "music", ext: "svg", preview: true },
+      { path: "symbols/music/midi-symbol.svg", kind: "symbol", group: "music", ext: "svg", preview: true },
+      { path: "symbols/music/musescore-symbol.svg", kind: "symbol", group: "music", ext: "svg", preview: true },
+      { path: "symbols/music/musicxml-symbol.svg", kind: "symbol", group: "music", ext: "svg", preview: true },
+      { path: "symbols/music/score-symbol.svg", kind: "symbol", group: "music", ext: "svg", preview: true },
+      { path: "symbols/music/vsqx-symbol.svg", kind: "symbol", group: "music", ext: "svg", preview: true },
+      { path: "symbols/technology/ai-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/database-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/ecmascript-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/java-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/jdbc-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/nodejs-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/odata-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/parser-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/sql-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/typescript-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/web-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "symbols/technology/webbrowser-symbol.svg", kind: "symbol", group: "technology", ext: "svg", preview: true },
+      { path: "wordmarks/2-logo.svg", kind: "wordmark", group: "wordmarks", ext: "svg", preview: true },
+      { path: "wordmarks/html-logo.svg", kind: "wordmark", group: "wordmarks", ext: "svg", preview: true },
+      { path: "wordmarks/local-logo.svg", kind: "wordmark", group: "wordmarks", ext: "svg", preview: true },
+      { path: "wordmarks/md-logo.svg", kind: "wordmark", group: "wordmarks", ext: "svg", preview: true },
+      { path: "wordmarks/miku-logo.svg", kind: "wordmark", group: "wordmarks", ext: "svg", preview: true },
+      { path: "wordmarks/project-logo.svg", kind: "wordmark", group: "wordmarks", ext: "svg", preview: true },
+      { path: "wordmarks/tools-logo.svg", kind: "wordmark", group: "wordmarks", ext: "svg", preview: true },
+      { path: "wordmarks/xlsx-logo.svg", kind: "wordmark", group: "wordmarks", ext: "svg", preview: true },
+      { path: "ogp/local-html-tools-ogp.png", kind: "ogp", group: "ogp", ext: "png", preview: true },
+      { path: "ogp/local-html-tools-ogp.pptx", kind: "ogp-source", group: "ogp", ext: "pptx", preview: false },
+      { path: "ogp/mikuproject-ogp.png", kind: "ogp", group: "ogp", ext: "png", preview: true },
+      { path: "ogp/mikuproject-ogp.pptx", kind: "ogp-source", group: "ogp", ext: "pptx", preview: false },
+      { path: "ogp/xlsx2md-ogp.png", kind: "ogp", group: "ogp", ext: "png", preview: true },
+      { path: "ogp/xlsx2md-ogp.pptx", kind: "ogp-source", group: "ogp", ext: "pptx", preview: false }
+    ];
+
+    const catalog = document.getElementById("catalog");
+    const filters = document.getElementById("filters");
+    const stats = document.getElementById("stats");
+    const search = document.getElementById("search");
+    const empty = document.getElementById("empty");
+
+    const groups = ["all", ...new Set(assets.map((asset) => asset.group))];
+    let activeGroup = "all";
+    let query = "";
+
+    function fileName(path) {
+      return path.split("/").pop();
+    }
+
+    function label(value) {
+      return value.replace(/-/g, " ");
+    }
+
+    function buildFilters() {
+      filters.innerHTML = "";
+      groups.forEach((group) => {
+        const button = document.createElement("button");
+        button.className = `chip${group === activeGroup ? " active" : ""}`;
+        button.textContent = group;
+        button.type = "button";
+        button.addEventListener("click", () => {
+          activeGroup = group;
+          buildFilters();
+          render();
+        });
+        filters.appendChild(button);
+      });
+    }
+
+    function buildStats(items) {
+      const svgCount = items.filter((item) => item.ext === "svg").length;
+      const pngCount = items.filter((item) => item.ext === "png").length;
+      const pptxCount = items.filter((item) => item.ext === "pptx").length;
+      stats.innerHTML = "";
+      [
+        `${items.length} files`,
+        `${svgCount} svg`,
+        `${pngCount} png`,
+        `${pptxCount} pptx`
+      ].forEach((text) => {
+        const node = document.createElement("div");
+        node.className = "stat";
+        node.textContent = text;
+        stats.appendChild(node);
+      });
+    }
+
+    function matches(asset) {
+      const target = [asset.path, asset.kind, asset.group, asset.ext, fileName(asset.path)]
+        .join(" ")
+        .toLowerCase();
+      const hitByGroup = activeGroup === "all" || asset.group === activeGroup;
+      const hitByQuery = !query || target.includes(query);
+      return hitByGroup && hitByQuery;
+    }
+
+    function renderCard(asset) {
+      const article = document.createElement("article");
+      article.className = "card";
+
+      const preview = document.createElement("div");
+      preview.className = asset.preview ? "preview" : "preview file-only";
+      if (asset.preview) {
+        const image = document.createElement("img");
+        image.src = asset.path;
+        image.alt = fileName(asset.path);
+        image.loading = "lazy";
+        preview.appendChild(image);
+      } else {
+        preview.textContent = "Preview unavailable. Open or download the source file.";
+      }
+
+      const meta = document.createElement("div");
+      meta.className = "meta";
+
+      const title = document.createElement("h2");
+      title.className = "title";
+      title.textContent = fileName(asset.path);
+
+      const path = document.createElement("p");
+      path.className = "path";
+      path.textContent = asset.path;
+
+      const tags = document.createElement("div");
+      tags.className = "tags";
+      [asset.group, asset.kind, asset.ext].forEach((value) => {
+        const tag = document.createElement("span");
+        tag.className = "tag";
+        tag.textContent = label(value);
+        tags.appendChild(tag);
+      });
+
+      const links = document.createElement("div");
+      links.className = "links";
+
+      const open = document.createElement("a");
+      open.href = asset.path;
+      open.textContent = asset.preview ? "Open asset" : "Open file";
+      open.target = "_blank";
+      open.rel = "noreferrer";
+      links.appendChild(open);
+
+      const download = document.createElement("a");
+      download.href = asset.path;
+      download.textContent = "Download";
+      download.setAttribute("download", "");
+      links.appendChild(download);
+
+      meta.appendChild(title);
+      meta.appendChild(path);
+      meta.appendChild(tags);
+      meta.appendChild(links);
+
+      article.appendChild(preview);
+      article.appendChild(meta);
+      return article;
+    }
+
+    function render() {
+      const items = assets.filter(matches);
+      buildStats(items);
+      catalog.innerHTML = "";
+      items.forEach((asset) => catalog.appendChild(renderCard(asset)));
+      empty.style.display = items.length ? "none" : "block";
+    }
+
+    search.addEventListener("input", (event) => {
+      query = event.target.value.trim().toLowerCase();
+      render();
+    });
+
+    buildFilters();
+    render();
+  </script>
+</body>
+</html>

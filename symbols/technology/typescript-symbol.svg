@@ -1,0 +1,62 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">TypeScript symbol</title>
+  <desc id="desc">A TypeScript symbol with code lines and type annotation cues.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5A8FD3"/>
+      <stop offset="1" stop-color="#2F5E9B"/>
+    </linearGradient>
+    <linearGradient id="card" x1="324" y1="322" x2="864" y2="894" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBFDFF"/>
+      <stop offset="1" stop-color="#DEE8F7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="436" y1="528" x2="790" y2="796" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A6C8F3"/>
+      <stop offset="1" stop-color="#6F9EE0"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.184314 0 0 0 0 0.368627 0 0 0 0 0.607843 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="314" y="296" width="572" height="612" rx="72" fill="url(#card)"/>
+
+    <rect x="314" y="296" width="572" height="136" rx="72" fill="#3A6AAA"/>
+    <rect x="382" y="348" width="192" height="30" rx="15" fill="#EEF5FF" fill-opacity="0.96"/>
+    <circle cx="794" cy="364" r="20" fill="#EEF5FF"/>
+    <circle cx="730" cy="364" r="20" fill="#D1E1F6"/>
+
+    <g fill="#9EBFEB">
+      <rect x="404" y="504" width="172" height="28" rx="14"/>
+      <rect x="404" y="560" width="250" height="28" rx="14"/>
+      <rect x="404" y="616" width="196" height="28" rx="14"/>
+      <rect x="404" y="672" width="268" height="28" rx="14"/>
+    </g>
+
+    <g fill="url(#accent)">
+      <rect x="616" y="504" width="86" height="28" rx="14"/>
+      <rect x="694" y="560" width="108" height="28" rx="14"/>
+      <rect x="640" y="616" width="124" height="28" rx="14"/>
+      <rect x="716" y="672" width="78" height="28" rx="14"/>
+    </g>
+
+    <g fill="#315B93">
+      <circle cx="598" cy="518" r="10"/>
+      <circle cx="676" cy="574" r="10"/>
+      <circle cx="622" cy="630" r="10"/>
+      <circle cx="698" cy="686" r="10"/>
+    </g>
+
+    <rect x="404" y="760" width="180" height="86" rx="28" fill="#3A6AAA"/>
+    <text x="440" y="820" fill="#F3F8FF" font-family="'Avenir Next', 'Futura', 'Trebuchet MS', sans-serif" font-size="64" font-weight="800">TS</text>
+  </g>
+</svg>

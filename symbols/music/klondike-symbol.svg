@@ -1,0 +1,49 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Klondike symbol</title>
+  <desc id="desc">A Klondike solitaire symbol with stacked playing cards.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3E9B76"/>
+      <stop offset="1" stop-color="#245E48"/>
+    </linearGradient>
+    <linearGradient id="card" x1="360" y1="344" x2="824" y2="864" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFDFC"/>
+      <stop offset="1" stop-color="#F0ECE8"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.141176 0 0 0 0 0.368627 0 0 0 0 0.282353 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="314" y="296" width="572" height="612" rx="72" fill="#EAF6F0"/>
+
+    <rect x="314" y="296" width="572" height="136" rx="72" fill="#2C7358"/>
+    <rect x="382" y="348" width="186" height="30" rx="15" fill="#F2FBF7" fill-opacity="0.96"/>
+    <circle cx="794" cy="364" r="20" fill="#F2FBF7"/>
+    <circle cx="730" cy="364" r="20" fill="#CDE7DB"/>
+
+    <g transform="rotate(-10 470 650)">
+      <rect x="366" y="468" width="232" height="328" rx="34" fill="url(#card)"/>
+      <rect x="388" y="490" width="188" height="284" rx="22" stroke="#D9D2CB" stroke-width="8"/>
+      <path d="M442 574C442 552 460 534 482 534C504 534 522 552 522 574C522 614 482 646 482 646C482 646 442 614 442 574Z" fill="#D34A59"/>
+      <rect x="430" y="690" width="104" height="20" rx="10" fill="#D34A59" fill-opacity="0.25"/>
+    </g>
+
+    <g transform="rotate(8 650 650)">
+      <rect x="520" y="454" width="248" height="344" rx="36" fill="url(#card)"/>
+      <rect x="544" y="478" width="200" height="296" rx="24" stroke="#D9D2CB" stroke-width="8"/>
+      <text x="584" y="560" fill="#22252A" font-family="'Avenir Next', 'Futura', 'Trebuchet MS', sans-serif" font-size="78" font-weight="800">A</text>
+      <path d="M594 628C594 608 610 592 630 592C650 592 666 608 666 628C666 664 630 694 630 694C630 694 594 664 594 628Z" fill="#22252A"/>
+      <rect x="574" y="716" width="142" height="24" rx="12" fill="#2C7358" fill-opacity="0.18"/>
+    </g>
+  </g>
+</svg>
