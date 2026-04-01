@@ -1,0 +1,64 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">MEI symbol</title>
+  <desc id="desc">An MEI symbol combining music notation and structured encoding cues.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4F8C9D"/>
+      <stop offset="1" stop-color="#2D5B68"/>
+    </linearGradient>
+    <linearGradient id="sheet" x1="324" y1="322" x2="864" y2="894" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBFEFF"/>
+      <stop offset="1" stop-color="#DFECF0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="440" y1="530" x2="792" y2="792" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A9D0DA"/>
+      <stop offset="1" stop-color="#6FA9BA"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.176471 0 0 0 0 0.356863 0 0 0 0 0.407843 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <path d="M332 304C332 281.909 349.909 264 372 264H722.118C732.726 264 742.9 268.214 750.402 275.716L863.284 388.598C870.786 396.1 875 406.274 875 416.882V896C875 918.091 857.091 936 835 936H372C349.909 936 332 918.091 332 896V304Z" fill="url(#sheet)"/>
+    <path d="M744 264V374C744 396.091 761.909 414 784 414H875" fill="#CDE1E7"/>
+
+    <rect x="404" y="384" width="160" height="40" rx="20" fill="#366878"/>
+    <rect x="404" y="468" width="252" height="28" rx="14" fill="#9CC2CC"/>
+    <rect x="404" y="522" width="204" height="28" rx="14" fill="#C1D9DF"/>
+
+    <g stroke="#89B2BE" stroke-width="8" stroke-linecap="round" opacity="0.85">
+      <path d="M404 622H812"/>
+      <path d="M404 658H812"/>
+      <path d="M404 694H812"/>
+      <path d="M404 730H812"/>
+      <path d="M404 766H812"/>
+    </g>
+
+    <g fill="url(#accent)">
+      <ellipse cx="500" cy="744" rx="30" ry="22"/>
+      <ellipse cx="656" cy="672" rx="30" ry="22"/>
+      <rect x="430" y="816" width="320" height="24" rx="12"/>
+      <rect x="430" y="852" width="250" height="20" rx="10"/>
+    </g>
+
+    <g stroke="#2D5B68" stroke-width="14" stroke-linecap="round">
+      <path d="M526 732V598"/>
+      <path d="M682 660V550"/>
+    </g>
+
+    <g fill="#2D5B68">
+      <rect x="732" y="598" width="20" height="20" rx="10"/>
+      <rect x="760" y="626" width="20" height="20" rx="10"/>
+      <rect x="788" y="654" width="20" height="20" rx="10"/>
+    </g>
+  </g>
+</svg>

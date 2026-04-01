@@ -1,0 +1,51 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Group symbol</title>
+  <desc id="desc">A group symbol with multiple items enclosed by a shared boundary.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7E94AE"/>
+      <stop offset="1" stop-color="#4A5B70"/>
+    </linearGradient>
+    <linearGradient id="card" x1="324" y1="322" x2="864" y2="894" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBFCFD"/>
+      <stop offset="1" stop-color="#E1E6EB"/>
+    </linearGradient>
+    <linearGradient id="items" x1="436" y1="520" x2="790" y2="796" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C3CEDB"/>
+      <stop offset="1" stop-color="#8FA0B2"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.290196 0 0 0 0 0.356863 0 0 0 0 0.439216 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="314" y="296" width="572" height="612" rx="72" fill="url(#card)"/>
+
+    <rect x="314" y="296" width="572" height="136" rx="72" fill="#56687E"/>
+    <rect x="382" y="348" width="168" height="30" rx="15" fill="#F1F4F7" fill-opacity="0.96"/>
+    <circle cx="794" cy="364" r="20" fill="#F1F4F7"/>
+    <circle cx="730" cy="364" r="20" fill="#D3DCE4"/>
+
+    <rect x="396" y="500" width="408" height="296" rx="42" stroke="#72859B" stroke-width="12" stroke-dasharray="22 18"/>
+
+    <g fill="url(#items)">
+      <rect x="440" y="548" width="130" height="82" rx="26"/>
+      <rect x="630" y="548" width="130" height="82" rx="26"/>
+      <rect x="535" y="672" width="130" height="82" rx="26"/>
+    </g>
+
+    <g stroke="#7D8FA5" stroke-width="10" stroke-linecap="round">
+      <path d="M570 588H630"/>
+      <path d="M600 630V672"/>
+    </g>
+  </g>
+</svg>

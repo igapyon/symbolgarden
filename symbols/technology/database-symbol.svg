@@ -1,0 +1,50 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Database symbol</title>
+  <desc id="desc">A database symbol with stacked storage cylinders.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5C8FC7"/>
+      <stop offset="1" stop-color="#31598D"/>
+    </linearGradient>
+    <linearGradient id="card" x1="324" y1="322" x2="864" y2="894" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBFDFF"/>
+      <stop offset="1" stop-color="#DDE7F4"/>
+    </linearGradient>
+    <linearGradient id="db" x1="416" y1="478" x2="786" y2="824" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A7C5EF"/>
+      <stop offset="1" stop-color="#7199D8"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.192157 0 0 0 0 0.34902 0 0 0 0 0.552941 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="314" y="296" width="572" height="612" rx="72" fill="url(#card)"/>
+
+    <rect x="314" y="296" width="572" height="136" rx="72" fill="#3E679F"/>
+    <rect x="382" y="348" width="186" height="30" rx="15" fill="#EEF4FE" fill-opacity="0.96"/>
+    <circle cx="794" cy="364" r="20" fill="#EEF4FE"/>
+    <circle cx="730" cy="364" r="20" fill="#D1DFF5"/>
+
+    <ellipse cx="600" cy="532" rx="168" ry="56" fill="url(#db)"/>
+    <path d="M432 532V716C432 746.928 507.216 772 600 772C692.784 772 768 746.928 768 716V532" fill="url(#db)"/>
+    <ellipse cx="600" cy="716" rx="168" ry="56" fill="#87ACDF"/>
+    <ellipse cx="600" cy="624" rx="168" ry="56" fill="#97B9E7"/>
+    <path d="M432 624C432 654.928 507.216 680 600 680C692.784 680 768 654.928 768 624" stroke="#5C86C4" stroke-width="10"/>
+    <path d="M432 716C432 746.928 507.216 772 600 772C692.784 772 768 746.928 768 716" stroke="#5C86C4" stroke-width="10"/>
+
+    <g fill="#4772B3">
+      <rect x="486" y="808" width="110" height="20" rx="10"/>
+      <rect x="612" y="808" width="104" height="20" rx="10"/>
+    </g>
+  </g>
+</svg>

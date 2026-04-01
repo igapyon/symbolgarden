@@ -1,0 +1,50 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Close symbol</title>
+  <desc id="desc">A close symbol with shut panels suggesting something closed and sealed.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#687998"/>
+      <stop offset="1" stop-color="#3F4B61"/>
+    </linearGradient>
+    <linearGradient id="door" x1="338" y1="352" x2="850" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBFCFE"/>
+      <stop offset="1" stop-color="#DFE5EC"/>
+    </linearGradient>
+    <linearGradient id="center" x1="470" y1="494" x2="732" y2="786" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BCC7D5"/>
+      <stop offset="1" stop-color="#8B98AB"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.247059 0 0 0 0 0.294118 0 0 0 0 0.380392 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="314" y="296" width="572" height="612" rx="72" fill="#E9EEF3"/>
+
+    <rect x="314" y="296" width="572" height="136" rx="72" fill="#4A576F"/>
+    <rect x="382" y="348" width="170" height="30" rx="15" fill="#F1F4F7" fill-opacity="0.96"/>
+    <circle cx="794" cy="364" r="20" fill="#F1F4F7"/>
+    <circle cx="730" cy="364" r="20" fill="#D4DCE4"/>
+
+    <path d="M388 478C388 449.281 411.281 426 440 426H600V820H440C411.281 820 388 796.719 388 768V478Z" fill="url(#door)"/>
+    <path d="M600 426H760C788.719 426 812 449.281 812 478V768C812 796.719 788.719 820 760 820H600V426Z" fill="url(#center)"/>
+
+    <rect x="566" y="560" width="68" height="126" rx="20" fill="#5C697D"/>
+    <circle cx="544" cy="624" r="14" fill="#AAB7C9"/>
+    <g fill="#73839A">
+      <rect x="438" y="512" width="118" height="22" rx="11"/>
+      <rect x="438" y="560" width="92" height="20" rx="10"/>
+      <rect x="644" y="512" width="118" height="22" rx="11"/>
+      <rect x="644" y="560" width="92" height="20" rx="10"/>
+    </g>
+  </g>
+</svg>

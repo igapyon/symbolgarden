@@ -1,0 +1,55 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Web browser symbol</title>
+  <desc id="desc">A web browser symbol with a browser window and globe-like page content.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5E97D4"/>
+      <stop offset="1" stop-color="#2F6297"/>
+    </linearGradient>
+    <linearGradient id="window" x1="324" y1="322" x2="864" y2="894" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBFDFF"/>
+      <stop offset="1" stop-color="#DCE8F5"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="382" y1="430" x2="818" y2="788" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C5E4FF"/>
+      <stop offset="1" stop-color="#87B8EA"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.184314 0 0 0 0 0.384314 0 0 0 0 0.592157 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="314" y="296" width="572" height="612" rx="72" fill="url(#window)"/>
+
+    <rect x="314" y="296" width="572" height="136" rx="72" fill="#3870A7"/>
+    <circle cx="390" cy="364" r="20" fill="#EDF5FE"/>
+    <circle cx="454" cy="364" r="20" fill="#D4E6FA"/>
+    <circle cx="518" cy="364" r="20" fill="#B9D8F6"/>
+    <rect x="574" y="348" width="196" height="30" rx="15" fill="#EDF5FE" fill-opacity="0.96"/>
+
+    <rect x="372" y="474" width="456" height="322" rx="40" fill="url(#screen)"/>
+
+    <g stroke="#5C95CE" stroke-width="8" stroke-linecap="round" opacity="0.8">
+      <path d="M600 500V770"/>
+      <path d="M396 636H804"/>
+      <path d="M458 534C494 574 494 698 458 740"/>
+      <path d="M742 534C706 574 706 698 742 740"/>
+      <path d="M520 514C542 578 542 692 520 756"/>
+      <path d="M680 514C658 578 658 692 680 756"/>
+    </g>
+
+    <g fill="#2F6297">
+      <rect x="430" y="820" width="138" height="24" rx="12"/>
+      <rect x="586" y="820" width="184" height="24" rx="12"/>
+    </g>
+  </g>
+</svg>

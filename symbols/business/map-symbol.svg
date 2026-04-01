@@ -1,0 +1,51 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Map symbol</title>
+  <desc id="desc">A map symbol with folded panels and a location pin.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#62A66E"/>
+      <stop offset="1" stop-color="#35603D"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="338" y1="352" x2="850" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBFFF8"/>
+      <stop offset="1" stop-color="#DFEFD8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="450" y1="488" x2="786" y2="806" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A6D09D"/>
+      <stop offset="1" stop-color="#72AA68"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.207843 0 0 0 0 0.376471 0 0 0 0 0.239216 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="314" y="296" width="572" height="612" rx="72" fill="#E9F6E5"/>
+
+    <rect x="314" y="296" width="572" height="136" rx="72" fill="#42754A"/>
+    <rect x="382" y="348" width="156" height="30" rx="15" fill="#F3FBEF" fill-opacity="0.96"/>
+    <circle cx="794" cy="364" r="20" fill="#F3FBEF"/>
+    <circle cx="730" cy="364" r="20" fill="#D2E8CB"/>
+
+    <path d="M376 768V498L500 462L632 508L760 470V740L632 778L500 732L376 768Z" fill="url(#paper)"/>
+    <path d="M500 462V732" stroke="#B5D2AE" stroke-width="10"/>
+    <path d="M632 508V778" stroke="#B5D2AE" stroke-width="10"/>
+
+    <path d="M500 634C500 580 544 536 598 536C652 536 696 580 696 634C696 714 598 786 598 786C598 786 500 714 500 634Z" fill="url(#accent)"/>
+    <circle cx="598" cy="634" r="36" fill="#3F6E45"/>
+
+    <g stroke="#8CBD82" stroke-width="10" stroke-linecap="round" opacity="0.85">
+      <path d="M414 574C456 552 480 566 500 596"/>
+      <path d="M650 572C690 548 718 560 740 590"/>
+      <path d="M430 682C468 660 486 666 504 694"/>
+    </g>
+  </g>
+</svg>
