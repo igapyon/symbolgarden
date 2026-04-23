@@ -1,0 +1,58 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Index symbol</title>
+  <desc id="desc">An index symbol representing a JSON file that stores a directory listing.</desc>
+  <defs>
+    <linearGradient id="panel" x1="214" y1="194" x2="987" y2="1010" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5B8C8A"/>
+      <stop offset="1" stop-color="#355E69"/>
+    </linearGradient>
+    <linearGradient id="sheet" x1="326" y1="318" x2="868" y2="894" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FCFEFE"/>
+      <stop offset="1" stop-color="#E0EEF0"/>
+    </linearGradient>
+    <linearGradient id="folder" x1="396" y1="470" x2="750" y2="716" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A6D4D3"/>
+      <stop offset="1" stop-color="#6FB0B0"/>
+    </linearGradient>
+    <filter id="shadow" x="164" y="156" width="872" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="20"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.207843 0 0 0 0 0.368627 0 0 0 0 0.411765 0 0 0 0.2 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="216" y="208" width="768" height="784" rx="154" fill="url(#panel)"/>
+    <rect x="316" y="296" width="568" height="612" rx="72" fill="url(#sheet)"/>
+
+    <rect x="316" y="296" width="568" height="136" rx="72" fill="#3D6E77"/>
+    <rect x="384" y="348" width="156" height="30" rx="15" fill="#EFF9F8" fill-opacity="0.96"/>
+    <circle cx="792" cy="364" r="20" fill="#EFF9F8"/>
+    <circle cx="728" cy="364" r="20" fill="#C7E2E1"/>
+
+    <path d="M378 536C378 511.699 397.699 492 422 492H518C531.661 492 544.364 499.082 551.59 510.693L567.41 536H778C802.301 536 822 555.699 822 580V718C822 742.301 802.301 762 778 762H422C397.699 762 378 742.301 378 718V536Z" fill="url(#folder)"/>
+    <path d="M378 560C378 535.699 397.699 516 422 516H506C518.959 516 531.07 522.352 538.418 532.996L550 550H778C802.301 550 822 569.699 822 594V718C822 742.301 802.301 762 778 762H422C397.699 762 378 742.301 378 718V560Z" fill="#D9F0EF"/>
+
+    <g fill="#5F9A9B">
+      <rect x="430" y="594" width="40" height="26" rx="13"/>
+      <rect x="430" y="650" width="40" height="26" rx="13"/>
+      <rect x="430" y="706" width="40" height="26" rx="13"/>
+    </g>
+
+    <g fill="#7AADB0">
+      <rect x="492" y="592" width="176" height="30" rx="15"/>
+      <rect x="492" y="648" width="222" height="30" rx="15"/>
+      <rect x="492" y="704" width="150" height="30" rx="15"/>
+    </g>
+
+    <g stroke="#355E69" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M712 560C683 560 666 580 666 610V624C666 649 655 663 632 668C655 673 666 687 666 712V726C666 756 683 776 712 776"/>
+      <path d="M792 560C821 560 838 580 838 610V624C838 649 849 663 872 668C849 673 838 687 838 712V726C838 756 821 776 792 776"/>
+    </g>
+  </g>
+</svg>
